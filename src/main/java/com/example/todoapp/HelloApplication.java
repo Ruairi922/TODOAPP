@@ -7,19 +7,20 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
+public class HelloApplication  extends Application {
 
-public class HelloApplication extends Application {
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("hello-view.fxml")));
-        root.setStyle("-fx-background-color: lightblue;"); // Change background colour to light blue
+        root.setStyle("-fx-background-color: lightblue;"); // Use your desired color
         Scene scene = new Scene(root, 800, 500);
-        stage.setTitle("To-Do Application");
-        stage.setScene(scene);
-        stage.show();
+        root.setStyle("-fx-background-color: lightblue;"); // Use your desired color
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("To-Do App");
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 }

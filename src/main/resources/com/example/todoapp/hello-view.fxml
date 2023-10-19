@@ -8,20 +8,21 @@
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml">
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.todoapp.HelloController">
 
     <center>
         <ListView fx:id="todoListView">
             <VBox>
-                <!-- Placeholder for users tasks it created vertical layouts in GUI-->
+                <!-- Placeholder for to-do items -->
             </VBox>
         </ListView>
     </center>
     <bottom>
         <HBox spacing="10">
             <TextField fx:id="taskTextField" promptText="Add a new task..." />
+            <Button text="Add" onAction="#addTask" />
+            <Button text="Remove" onAction="#removeTask" />
         </HBox>
     </bottom>
 </BorderPane>
-
-
